@@ -40,11 +40,26 @@
   "operatingSystem": "iOS",
   "description": "Ocular measures blink awareness and head steadiness entirely on-device using Apple's Vision framework.",
   "url": "https://ocular.app/",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Free",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "name": "Ocular Pro (monthly)",
+      "price": "3.99",
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "name": "Ocular Pro (yearly)",
+      "price": "39.99",
+      "priceCurrency": "USD"
+    }
+  ]
 }
 </script>
 </head>
@@ -87,6 +102,8 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
         </ul>
       </div>
     </div>
@@ -124,7 +141,7 @@
           </span>
           <span class="soon">Coming soon</span>
         </button>
-        <p class="cta-note">Free to start. For iPhone, iOS 17 or later.</p>
+        <p class="cta-note">Free to start. Designed for iPhone.</p>
       </div>
 
       <div class="hero__device reveal" style="--delay:300ms">
@@ -217,10 +234,11 @@
           <path d="m8.8 12.1 2.2 2.2 4.2-4.4"/>
         </svg>
         <span class="eyebrow reveal">Privacy</span>
-        <h2 id="privacy-title" class="reveal" style="--delay:60ms">Nothing to upload.<br>Nothing to trust us with.</h2>
+        <h2 id="privacy-title" class="reveal" style="--delay:60ms">Your face never<br>leaves your phone.</h2>
         <p class="lead reveal" style="--delay:120ms">
-          Ocular was built so that the sensitive part — your face — never becomes data
-          anyone else can hold. Not us. Not a server. Not an advertiser.
+          Ocular analyses the camera feed on your iPhone and discards every frame the
+          instant it's measured. What syncs to your private account is a short list of
+          numbers — never an image.
         </p>
       </div>
 
@@ -235,8 +253,8 @@
         <li class="privacy__item reveal" style="--delay:60ms">
           <svg class="privacy__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
           <div>
-            <h3>Entirely on-device</h3>
-            <p>All processing runs locally through Apple's Vision framework and the Neural Engine. Ocular works in airplane mode.</p>
+            <h3>Entirely on-device processing</h3>
+            <p>Blink and head-pose analysis runs locally through Apple's Vision framework. No image data is ever sent anywhere for processing.</p>
           </div>
         </li>
         <li class="privacy__item reveal" style="--delay:120ms">
@@ -257,7 +275,7 @@
           <svg class="privacy__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
           <div>
             <h3>Only derived metrics are saved</h3>
-            <p>What persists is a handful of numbers — blink rate, steadiness, session length — kept locally on your iPhone.</p>
+            <p>What persists is a handful of numbers — blink rate, steadiness, duration — synced to your private account and isolated by Row Level Security.</p>
           </div>
         </li>
       </ul>
@@ -320,7 +338,7 @@
             Your sessions become a trend, not a scoreboard. Ocular learns your normal and
             tells you when the day is drifting away from it.
           </p>
-          <p class="card__meta">Local trends · zero cloud sync</p>
+          <p class="card__meta">Trends across your full history</p>
         </article>
       </div>
     </div>
@@ -341,6 +359,7 @@
           </div>
 
           <p class="plan__price">$0 <span>forever</span></p>
+          <p class="plan__alt">No card required</p>
 
           <ul class="plan__features">
             <li>
@@ -366,7 +385,8 @@
             <span class="plan__tag">Coming soon</span>
           </div>
 
-          <p class="plan__price">TBA <span>priced at launch</span></p>
+          <p class="plan__price">$3.99 <span>per month</span></p>
+          <p class="plan__alt">or $39.99 per year — two months free</p>
 
           <ul class="plan__features">
             <li>
@@ -391,7 +411,12 @@
         </article>
       </div>
 
-      <p class="pricing__note">Everything in Free stays free. Whichever tier you're on, there are no ads and no trackers.</p>
+      <p class="pricing__note">
+        Prices in US dollars and may vary by region. Subscriptions renew automatically unless
+        cancelled at least 24 hours before the period ends, and can be managed in your Apple
+        Account. Full details in the <a href="terms.html#subscriptions">Terms of Use</a>.
+        Whichever tier you're on, there are no ads and no trackers.
+      </p>
     </div>
   </section>
 
@@ -410,7 +435,7 @@
             <span class="faq__icon" aria-hidden="true"></span>
           </summary>
           <div class="faq__a"><div class="faq__a-inner">
-            <p>No. Frames from the front camera are analysed in memory and released straight away. There is no recording, no upload, and no server that could receive one. Only derived numbers — like blink rate and steadiness — are written to your device.</p>
+            <p>No. Frames from the front camera are analysed in memory and released straight away — nothing is recorded, and no photo or video is ever uploaded. When a session ends, only the numeric results sync to your account: blink rate, blink consistency, head steadiness, duration and timestamps.</p>
           </div></div>
         </details>
 
@@ -440,7 +465,17 @@
             <span class="faq__icon" aria-hidden="true"></span>
           </summary>
           <div class="faq__a"><div class="faq__a-inner">
-            <p>No. Because every measurement happens locally, Ocular is fully functional offline — including in airplane mode.</p>
+            <p>Measurement is local, so a check-in itself works offline. Signing in and syncing finished sessions do need a connection — sessions you record offline sync once you're back online.</p>
+          </div></div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary class="faq__q">
+            Do I need an account?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__a"><div class="faq__a-inner">
+            <p>Yes. An account is what lets your history follow you and survive a lost or replaced phone. Sign-in is handled by Supabase Auth, and your sessions are isolated at the database level by Row Level Security, so no other user can read them. You can delete the account and everything in it at any time.</p>
           </div></div>
         </details>
 
@@ -450,7 +485,7 @@
             <span class="faq__icon" aria-hidden="true"></span>
           </summary>
           <div class="faq__a"><div class="faq__a-inner">
-            <p>Ocular is designed for iPhone running iOS 17 or later, with a front-facing camera. We'll confirm the exact device list on the App Store listing at launch.</p>
+            <p>Ocular is built for iPhone with a front-facing camera. The exact iOS version and supported device list are shown on the App Store listing.</p>
           </div></div>
         </details>
 
@@ -460,7 +495,7 @@
             <span class="faq__icon" aria-hidden="true"></span>
           </summary>
           <div class="faq__a"><div class="faq__a-inner">
-            <p>It's gone. Your sessions live in the app's local storage, so deleting Ocular removes them with it. You can also clear your history from inside the app at any time. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+            <p>Your sessions belong to your account, so removing the app doesn't erase them. From inside Ocular you can export your data, delete a single session, delete every session, or permanently delete your account. See the <a href="privacy.html#deletion">Privacy Policy</a> for details.</p>
           </div></div>
         </details>
       </div>
@@ -493,11 +528,11 @@
       </div>
 
       <div class="footer__col">
-        <h2>Company</h2>
+        <h2>Legal &amp; support</h2>
         <ul class="footer__links">
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Use</a></li>
-          <li><a href="https://github.com/" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          <li><a href="mailto:oculapp@gmail.com">Support</a></li>
         </ul>
       </div>
     </div>
